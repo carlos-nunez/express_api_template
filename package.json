@@ -1,0 +1,25 @@
+{
+  "name": "todo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apple-signin-auth": "^1.4.1",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "mongoose-autopopulate": "^0.12.3",
+    "node-apple-receipt-verify": "^1.7.4",
+    "nodemon": "^2.0.4",
+    "stripe": "^8.126.0"
+  },
+  "description": ""
+}
