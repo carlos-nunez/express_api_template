@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+import {IUser} from '../../types/IUser';
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema<IUser>({
   email: {
     type: String,
     unique: true,
@@ -17,4 +18,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-mongoose.model('User', userSchema);
+mongoose.model<IUser>('User', userSchema);

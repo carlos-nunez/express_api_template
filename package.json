@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node index.ts"
+    "dev": "nodemon index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -12,8 +12,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9",
-    "mongoose-autopopulate": "^0.12.3",
+    "mongoose": "^6.6.0",
     "nodemon": "^2.0.4"
   },
   "description": "",
