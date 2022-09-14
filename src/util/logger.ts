@@ -1,19 +1,19 @@
 import {LogLevel} from '../types/ILogging';
 
 class Logger {
-  static log = (content: string, logLevel: LogLevel) => {
+  static log = (content: any, logLevel: LogLevel) => {
     switch (logLevel) {
       case 'info':
-        console.info(`[INFO]: ${content}`);
+        console.info(`[INFO]:`, content);
         break;
       case 'debug':
-        console.debug(`[DEBUG]: ${content}`);
+        console.debug(`[DEBUG]:`, content);
         break;
       case 'warn':
-        console.warn(`[WARN]: ${content}`);
+        console.warn(`[WARN]:`, content);
         break;
       case 'error':
-        console.error(`[ERROR]: ${content}`);
+        console.error(`[ERROR]:`, content);
         break;
     }
   };
