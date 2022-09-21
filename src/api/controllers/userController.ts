@@ -39,9 +39,9 @@ export const createUserController = async (req: Request, res: Response) => {
 };
 
 export const updateUserController = async (req: Request, res: Response) => {
-  if (req.body.userID && (req.body.email || req.body.password)) {
+  if (req.params.id && (req.body.email || req.body.password)) {
     try {
-      const user = await updateUser(req.body.userID, req.body);
+      const user = await updateUser(req.params.id, req.body);
       res.send({user});
     } catch (error) {
       res.status(422).send({error});

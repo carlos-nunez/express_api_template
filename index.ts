@@ -3,7 +3,7 @@ import express, {Express, Request, Response} from 'express';
 import cors from 'cors';
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import Logger from './src/util/logger';
+import Logger from './src/util/Logger';
 
 //Routes
 import userRoutes from './src/api/routes/userRoutes';

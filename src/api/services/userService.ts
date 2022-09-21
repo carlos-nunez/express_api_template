@@ -1,4 +1,4 @@
-import mongoose, {HydratedDocument} from 'mongoose';
+import mongoose from 'mongoose';
 import {IUser} from '../../types/IUser';
 const User = mongoose.model('User');
 
@@ -16,27 +16,12 @@ export const createUser = async (userData: IUser) => {
   const {email, password} = userData;
   const user = new User({email, password});
   await user.save();
-
   return user;
 };
 
-export const updateUser = async (userID: string, {email, password}: {email?: string; password?: string}) => {
-  const user: HydratedDocument<IUser> | null = await User.findOne({_id: userID});
-
-  if (user) {
-    if (email) {
-      user.email = email;
-    }
-    if (password) {
-      user.password = password;
-    }
-
-    await user.save();
-
-    return user;
-  } else {
-    return 'User not found';
-  }
+export const updateUser = async (userID: string, userUpdate: {email?: string; password?: string}) => {
+  const user = await User.updateOne({_id: userID, ...userUpdate});
+  return user ?? null;
 };
 
 export const deleteUser = async (userID: string) => {
